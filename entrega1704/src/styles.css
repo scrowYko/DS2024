@@ -1,0 +1,16 @@
+button{
+    color: #F5F9FF;
+    background-color: #3A86FF;
+    padding:12px;
+    border: 1px solid #F5F9FF;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color:#F5F9FF;
+    color: #3A86FF;
+    border-color: black;
+}

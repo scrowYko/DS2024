@@ -1,0 +1,67 @@
+#root {
+  margin: 0 auto;
+}
+
+/* Estilização do container, onde foi pedido que o display fosse flex, itens alinhados verticalmente no centro e distribuidos horizontamente pelo eixo, e um gap de 20 píxels.
+Adicionais: Border, borda arredondada e com cor. Padding, para que o item 'container' ficasse esteticamente mais confortável. Flex direction e Flex-wrap,
+caso houvesse mais elementos filho eles iriam para baixo sem esticar a tela, ficando mais organizado.
+*/
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  background-color: #12284D;
+  padding: 40px;
+  border-radius: 16px;
+  border: 2px solid cornflowerblue;
+}
+
+/* 
+Adicionais: Estética com padding e border-radius.
+*/
+.child{
+  padding: 10px;
+  border-radius: 8px ;
+}
+
+/* Foi pedido que os elementos filho fossem um de cada cor, logo o id começa com c por ser Child, e a numeração em ordem da esquerda (1) para a direita (3) 
+Observação: O terceiro elemento filho é um botão, onde fica na página styles.css.
+*/
+#c1{
+  background-color: #3579E6;
+  color: #ffffff;
+}
+#c2{
+  background-color: #F5F9FF;
+  color: #12284D;
+}
+
+/* 
+  Utilização do media query, onde a tela que tenha no máximo 600px de largura tem a estilização dentro do componente de media query
+*/
+@media screen and (max-width: 600px) {
+  
+  /* 
+  Container quando a tela for menor que 600px de largura a distribuição dos elementos filhos serão de forma vertical e o container deve ter outra cor.
+  Adicionais: Gap trocado 20px -> 25px
+  */ 
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 25px;
+    background-color: dodgerblue;
+  }
+
+  /* 
+  Os elementos filho devem ocupar 100% da largura disponível.
+  */
+  .child{
+    width: 100%;
+  }
+}
